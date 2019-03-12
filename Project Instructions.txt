@@ -1,0 +1,105 @@
+Start mongodb using :
+
+
+mongod.exe --dbpath "C:\Data"
+
+
+Create a server folder:
+
+
+
+
+
+
+
+
+npm install -g @angular/cli
+ng new project
+cd my-dream-app
+ng serve
+
+npm i angular-file-uploader
+
+ng g c alert
+
+ng g service alert
+
+npm i rxjs-compat
+
+npm i @types/node
+
+ng generate guard auth
+
+
+ng g c home
+ng g c register
+ng g c login
+ng g c upload
+
+ng g class user
+
+ng g service authentication
+
+ng g service user
+
+Create server folder
+
+npm init
+
+npm i bcryptjs
+npm i body-parser
+npm i cors
+npm i express
+npm i express-jwt
+npm i jsonwebtoken
+npm i lodash
+npm i mongodb
+npm i mongoskin
+npm i multer
+npm i q
+npm i request
+npm i rootpath
+
+
+npm install
+
+node server.js
+
+Angular cli commands
+
+
+https://github.com/angular/angular-cli/wiki/generate 
+
+    class
+    component
+    directive
+    enum
+    guard
+    interface
+    module
+    pipe
+    service
+    appShell
+    application
+    library
+    universal
+
+http://jasonwatmore.com/post/2017/02/22/mean-with-angular-2-user-registration-and-login-example-tutorial#alert-component-html
+
+Models - User
+
+Express  - userRoutes
+
+DB - angularuser
+
+start node server.js
+
+Login and signup page reference
+
+http://jasonwatmore.com/post/2018/05/16/angular-6-user-registration-and-login-example-tutorial
+
+User create edit update reference
+
+https://appdividend.com/2018/01/21/angular-5-crud-tutorial-example-scratch/
+
+

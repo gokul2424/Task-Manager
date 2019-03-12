@@ -46,19 +46,34 @@ app.post('/tasks', function (req, res)
 
 app.delete('/tasks/:taskname', function (req, res) 
 {
-var taskname=req.params.taskname
-repo.deletetask(taskname,(result)=>{
-res.status(202).json({message:"Deleted the document",taskname:taskname})
-})
+	var taskname=req.params.taskname
+	repo.deletetask(taskname,(result)=>
+	{
+		res.status(202).json({message:"Deleted the document",taskname:taskname})
+	})
 })
  
 
-app.put('/edittasks', function (req, res) {
+app.put('/edittasks', function (req, res) 
+{
     var body=req.body;
     console.log(req.body)
     console.log(body.taskname)
-    repo.updatetask(body,(result)=>{
-    res.status(202).json({message:"updated the document",})
-    })
-    })
+    repo.updatetask(body,(result)=>
+	{
+		res.status(202).json({message:"updated the document",})
+	})
+})
+
+app.put('/endtasks', function (req, res) 
+{
+    var body=req.body;
+    console.log(req.body)
+    console.log(body.taskname)
+    repo.endtask(body,(result)=>
+	{
+		res.status(202).json({message:"ended the task",})
+	})
+})
+
 app.listen(7001,()=>console.log("Listening to port 7001..."))//

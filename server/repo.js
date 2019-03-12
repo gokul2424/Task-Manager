@@ -138,7 +138,6 @@ function updatetask(body,callback)
 		{ 
 			$set: 
 			{ 
-			   tskid:body.tskid,
 			   taskname:body.taskname,
 			   priority:body.priority,
 			   parenttask:body.parenttask,
@@ -162,7 +161,7 @@ function endtask(body,callback)
     connect((err,client)=>
 	{
         const db = client.db(dbName);
-        const collection = db.collection('task');
+        const collection = db.collection('state');
         //collection.find({'a': 3}).toArray(function(err, docs) {
           //console.log(docs);
           //});
@@ -171,7 +170,6 @@ function endtask(body,callback)
 		{ 
 			$set: 
 			{ 
-			   tskid:body.tskid,
 			   taskname:body.taskname,
 			   priority:body.priority,
 			   parenttask:body.parenttask,
@@ -182,7 +180,7 @@ function endtask(body,callback)
 		}, 
 		function(err, result) 
 		{
-            console.log("Updated the document with the field a equal to 2");
+            console.log("Ended the document with the field a equal to 2");
             console.log(result)
             callback(result);
         });  
@@ -190,4 +188,4 @@ function endtask(body,callback)
     })
 }
 
-module.exports={findtask,inserttask,deletetask,updatetask,insertparent,insertstate}
+module.exports={findtask,inserttask,deletetask,updatetask,insertparent,insertstate,endtask}

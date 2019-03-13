@@ -35,7 +35,7 @@ function findtask(callback)
 	{
 		const db = client.db(dbName);
 		//Collection Name
-		const collection = db.collection('task');
+		const collection = db.collection('state');
 		
 		// Find some documents
 		collection.find({}).toArray(function(err, docs) 
@@ -129,12 +129,13 @@ function updatetask(body,callback)
     connect((err,client)=>
 	{
         const db = client.db(dbName);
-        const collection = db.collection('task');
+        
+		const collection1 = db.collection('state');
         //collection.find({'a': 3}).toArray(function(err, docs) {
           //console.log(docs);
           //});
           //update one document
-        collection.updateOne({tskid:body.tskid}, 
+        collection1.updateOne({taskname:body.taskname}, 
 		{ 
 			$set: 
 			{ 
@@ -143,9 +144,14 @@ function updatetask(body,callback)
 			   parenttask:body.parenttask,
 			   startdate:body.startdate,
 			   enddate:body.enddate,
-			   state:body.state
+			   state:true
 			} 
-		}, 
+		},
+        //collection.find({'a': 3}).toArray(function(err, docs) {
+          //console.log(docs);
+          //});
+          //update one document
+         
 		function(err, result) 
 		{
             console.log("Updated the document with the field a equal to 2");
@@ -154,6 +160,7 @@ function updatetask(body,callback)
         });  
      
     })
+	
 }
 
 function endtask(body,callback)
@@ -166,7 +173,7 @@ function endtask(body,callback)
           //console.log(docs);
           //});
           //update one document
-        collection.updateOne({tskid:body.tskid}, 
+        collection.updateOne({taskname:body.taskname}, 
 		{ 
 			$set: 
 			{ 
@@ -175,7 +182,7 @@ function endtask(body,callback)
 			   parenttask:body.parenttask,
 			   startdate:body.startdate,
 			   enddate:body.enddate,
-			   state:'false'
+			   state:false
 			} 
 		}, 
 		function(err, result) 

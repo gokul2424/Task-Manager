@@ -26,9 +26,13 @@ app.post('/tasks', function (req, res)
 	
 	var par={"parenttask":content.parenttask}
 	
-	var statetask={"taskname":content.taskname,"parenttask":content.parenttask,"priority":content.priority,
-	"startdate":content.startdate,
-	"enddate":content.enddate,"state":"true"}
+	var statetask={
+		"taskname":content.taskname,
+		"parenttask":content.parenttask,
+		"priority":content.priority,
+		"startdate":content.startdate,
+		"enddate":content.enddate,
+		"state":true}
 	
 	repo.insertparent(par,(result)=>
 	{

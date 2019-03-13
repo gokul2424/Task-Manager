@@ -1,0 +1,50 @@
+<div>
+      <a [routerLink]="['/addtask']">Add Task</a>
+</div>
+  
+
+<div class="container">
+
+
+      <router-outlet></router-outlet>
+
+<h2 class="text-center">Tasks</h2>
+
+<div class="row">
+
+  <table class="table ">
+  <thead class="thead-light">
+  <tr>
+      <th scope="col">Task Name</th>
+      <th scope="col">Priority</th>
+      <th scope="col">Parent Task</th>
+      <th scope="col">Start Date</th>
+      <th scope="col">End Date</th>
+      <th scope="col"> </th>
+      <th scope="col"> </th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let state of states;let i=index"  >
+
+  <td>{{state.taskname}}</td>
+  <td>{{state.priority}}</td>
+  <td>{{state.parenttask}}</td> 
+  <td>{{state.startdate}}</td>
+  <td>{{state.enddate}}</td>
+  <td>
+
+	 <button type="button" class="btn btn-dark"  [disabled]="!state.state"
+      [routerLink]="['/updatetask']"  >UPDATE</button></td>
+	  
+  <td>
+    <button type="button" class="btn btn-success" 
+     (click)="endtask(state.taskname,state.priority,state.parenttask,state.startdate,state.enddate)">END</button>
+
+	 </td>
+  </tr>
+  </tbody>
+  </table>
+</div>
+</div>
+

@@ -1,3 +1,44 @@
-<p>
-  addtask works!
-</p>
+ <div>
+        <a [routerLink]="['/addtask']">Add Task</a><a [routerLink]="['/updatetask']">   Update Task</a>
+		<a [routerLink]="['/home']">   View Task</a>
+</div>
+<div>
+	
+</div>
+        
+<h1 class="text-center">Add Task</h1>
+<form>
+    <div class="form">
+      <div class="form-group col-md-6">
+        <label for="taskname">Task</label>
+        <input type="text" #taskname class="form-control" id="taskname" >
+      </div>
+      <div class="form-group col-md-6">
+          <label for="priority">Priority</label>
+          <input type="range" #priority min="1" max="50" value="10" 
+          class="form-control" id="priority">
+          
+        </div>
+      <div class="form-group col-md-6">
+          <label for="parenttask">Parent Task</label>
+          <input type="text" #parenttask class="form-control" id="parenttask">
+      </div> 
+  
+      <div class="form-group col-md-6">
+          <label for="startdate">Start Date</label>
+          <input type="date" #startdate class="form-control" id="startdate">
+      </div> 
+  
+      <div class="form-group col-md-6">
+          <label for="enddate">End Date</label>
+          <input type="date" #enddate class="form-control" id="enddate">
+      </div> 
+    </div>
+      <button type="button" class="btn btn-success" onClick="window.location.reload();"  
+      
+      (click)="addtask(taskname.value,priority.value,parenttask.value,startdate.value,enddate.value)">Add Task</button>  
+      <button type="reset" class="btn btn-warning" value=" Reset">Reset</button>
+    
+
+  
+  </form>

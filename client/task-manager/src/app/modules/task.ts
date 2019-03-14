@@ -7,7 +7,7 @@ export class Task {
         public parenttask:string,
         public startdate:string,
         public enddate:string,
-		public state:string
+		public state:boolean
 		)
     {
         

@@ -1,5 +1,5 @@
  <div>
-        <a [routerLink]="['/addtask']">Add Task</a><a [routerLink]="['/updatetask']">   Update Task</a>
+        <a [routerLink]="['/addtask']">Add Task</a>
 		<a [routerLink]="['/home']">   View Task</a>
 </div>
 <div>
@@ -35,7 +35,7 @@
       </div> 
     </div>
       <button type="button" class="btn btn-success" onClick="window.location.reload();"  
-      
+      onClick="window.location.reload()" [routerLink]="['/home']"
       (click)="addtask(taskname.value,priority.value,parenttask.value,startdate.value,enddate.value)">Add Task</button>  
       <button type="reset" class="btn btn-warning" value=" Reset">Reset</button>
     

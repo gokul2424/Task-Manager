@@ -34,7 +34,7 @@
   </div>
     <button type="button" class="btn btn-success" 
     onClick="window.location.reload();"  
-    
+    [routerLink]="['/home']"
     (click)="updatetask(taskname.value,priority.value,parenttask.value,
     startdate.value,enddate.value)">Update Task</button>  
     <button type="reset" class="btn btn-warning" value=" Reset">Reset</button>

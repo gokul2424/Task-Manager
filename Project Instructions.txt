@@ -8,6 +8,22 @@ Create a server folder:
 
 Repo Js and Server Js
 
+http://localhost:7001/task
+
+npm init
+
+
+npm i body-parser
+npm i cors
+npm i express
+npm i mongodb
+npm i mongoskin
+npm i request
+
+
+
+npm install
+
 Database: Task 
 
 Collections: task,state,parent
@@ -19,54 +35,51 @@ start node server.js
 
 
 npm install -g @angular/cli
-ng new project
-cd my-dream-app
+ng new task-manager
+cd task-manager
 ng serve
 
-npm i angular-file-uploader
+localhost:4200
 
-ng g c alert
-
-ng g service alert
-
-npm i rxjs-compat
-
-npm i @types/node
-
-ng generate guard auth
-
+Generate components:
 
 ng g c home
-ng g c register
-ng g c login
-ng g c upload
-
-ng g class user
-
-ng g service authentication
-
-ng g service user
-
-Create server folder
-
-npm init
-
-npm i bcryptjs
-npm i body-parser
-npm i cors
-npm i express
-npm i express-jwt
-npm i jsonwebtoken
-npm i lodash
-npm i mongodb
-npm i mongoskin
-npm i multer
-npm i q
-npm i request
-npm i rootpath
+ng g c addtask
+ng g c updatetask
 
 
-npm install
+Generate a class for modules:
+
+ng g class task
+
+
+Generate a service:
+
+ng g service task
+
+
+
+Generate pipes for search:
+
+
+ng g pipe searchTask
+
+ng g pipe searchEndDate
+
+ng g pipe searchParent
+
+
+ng g pipe searchStartDate
+
+ng g pipe searchTask
+
+ng g pipe searchPriorityFrom
+
+ng g pipe searchPriorityTo
+
+
+
+
 
 node server.js
 
@@ -89,11 +102,11 @@ https://github.com/angular/angular-cli/wiki/generate
     library
     universal
 
-Models - User
+Models - Task
 
-Express  - userRoutes
 
-DB - angularuser
+
+
 
 
 
